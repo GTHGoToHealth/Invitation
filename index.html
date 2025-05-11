@@ -87,36 +87,30 @@
 
           <!-- Start Countdown -->       
           <div>
-            <ul id="hitungmundur" >
-              <li><span class="days">10</span><p class="days_text">Days</p></li>
-              <li class="separator">:</li>
-              <li><span class="hours">09</span><p class="hours_text">Hours</p></li>
-              <li class="separator">:</li>
-              <li><span class="minutes">08</span><p class="minutes_text">Minutes</p></li>
-              <li class="separator">:</li>
-              <li><span class="seconds">001</span><p class="seconds_text">Seconds</p></li>
+            <ul id="hitungmundur">
+                <li><span class="days">10</span><p class="days_text">Days</p></li>
+                <li class="separator">:</li>
+                <li><span class="hours">09</span><p class="hours_text">Hours</p></li>
+                <li class="separator">:</li>
+                <li><span class="minutes">08</span><p class="minutes_text">Minutes</p></li>
+                <li class="separator">:</li>
+                <li><span class="seconds">01</span><p class="seconds_text">Seconds</p></li>
             </ul>
-            <div class="spasi">
-            </div>
+            <div class="spasi"></div>
             <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
-          
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '01/06/2025 19:00:00';
-
-              $('#hitungmundur').countdown({
-                date: 01/06/2025 19:00:00, // TODO Date format: 07/27/2017 17:00:00
-                offset: +5, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
-            </script>  
-          </div>
+                // Correct target date format for jQuery Countdown plugin
+                var targetDate = '06/01/2025 19:00:00'; // MM/DD/YYYY HH:MM:SS format
+        
+                // Initialize the countdown
+                $('#hitungmundur').countdown(targetDate, function(event) {
+                    // Update the countdown for each unit of time (days, hours, minutes, seconds)
+                    $(this).find('.days').html(event.strftime('%D'));
+                    $(this).find('.hours').html(event.strftime('%H'));
+                    $(this).find('.minutes').html(event.strftime('%M'));
+                    $(this).find('.seconds').html(event.strftime('%S'));
+                });
+            </script>
+        </div>
           <!-- End Countdown -->
         </div>
         <!-- End Hero Content-->
