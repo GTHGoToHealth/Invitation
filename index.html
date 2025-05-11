@@ -97,9 +97,12 @@
                 <li><span class="seconds">01</span><p class="seconds_text">Seconds</p></li>
             </ul>
             <div class="spasi"></div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Make sure jQuery is loaded -->
+            <script src="https://cdn.rawgit.com/hilios/jQuery.countdown/master/dist/jquery.countdown.min.js"></script> <!-- jQuery Countdown Plugin -->
             <script type="text/javascript">
-                // Correct target date format for jQuery Countdown plugin
+                // Correct target date format (MM/DD/YYYY HH:MM:SS)
                 var targetDate = '06/01/2025 19:00:00'; // MM/DD/YYYY HH:MM:SS format
+                console.log("Target Date: ", targetDate); // Log the target date for debugging
         
                 // Initialize the countdown
                 $('#hitungmundur').countdown(targetDate, function(event) {
@@ -108,6 +111,9 @@
                     $(this).find('.hours').html(event.strftime('%H'));
                     $(this).find('.minutes').html(event.strftime('%M'));
                     $(this).find('.seconds').html(event.strftime('%S'));
+                }).on('finish.countdown', function() {
+                    console.log('Countdown finished!');
+                    $(this).html("It's time!"); // Change text when countdown finishes
                 });
             </script>
         </div>
