@@ -50,7 +50,7 @@ html {
 
 
 .hero .title {
-  font-family: 'Rouge Script', sans-serif;
+  font-family: 'Rouge Script', sans-serif !important;
   font-weight: 700;
   transform: rotate(-2deg);
   font-size: 5rem;
@@ -206,6 +206,25 @@ html {
   padding: 0 0 0 0 ;
 }
 
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;  /* You can adjust this to control the map's maximum width */
+  margin: 0 auto;  /* Centers the map horizontally */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .main-content .section-light {
   padding: 80px 40px;
 }
@@ -298,7 +317,7 @@ html {
 }
 
 .nama-lengkap {
-  font-family: 'Rouge Script', sans-serif;
+  font-family: 'Rouge Script', sans-serif !important;
   color: #996E6D;
   font-size: 3.5rem;
   letter-spacing: 0px;
@@ -308,7 +327,7 @@ html {
 
 .ampersand {
 font-size: 5rem;
-font-family: 'Rouge Script', sans-serif;
+font-family: 'Rouge Script', sans-serif !important;
 color: #996E6D;
 line-height: 5rem;
 display: inline-block;
