@@ -483,41 +483,50 @@
     </a>
 
 
+<!-- Arrow Element -->
+<a href="#" class="floating-down-arrow" aria-label="Scroll down">
+  <span></span>
+</a>
 
-<!-- JavaScript for the arrow to take to the next section on click -->
+<!-- JavaScript at the end -->
+<script>
+  // Ensure the document is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ensure the arrow element exists before adding the event listener
+    const arrow = document.querySelector('.floating-down-arrow');
+    
+    if (arrow) {
+      // Listen for click events on the floating down arrow
+      arrow.addEventListener('click', function(e) {
+        e.preventDefault();
 
-  <!-- Arrow Element -->
-  <a href="#" class="floating-down-arrow" aria-label="Scroll down">
-    <span></span>
-  </a>
+        // Get all elements with the class 'scroll-section'
+        const sections = Array.from(document.querySelectorAll('.scroll-section'));
 
-  <!-- JavaScript at the end -->
-  <script>
-document.querySelector('.floating-down-arrow').addEventListener('click', function (e) {
-  e.preventDefault();
+        // Ensure that we have more than one section to scroll to
+        if (sections.length > 0) {
+          // Find the current section (the one that is visible in the viewport)
+          const currentSectionIndex = sections.findIndex(section => {
+            const rect = section.getBoundingClientRect();
+            return rect.top >= 0 && rect.top < window.innerHeight;
+          });
 
-  // Get all elements with the class 'scroll-section'
-  const sections = Array.from(document.querySelectorAll('.scroll-section'));
+          // If there's a next section, scroll to it
+          if (currentSectionIndex !== -1 && currentSectionIndex < sections.length - 1) {
+            const nextSection = sections[currentSectionIndex + 1];
 
-  // Ensure that we have more than one section to scroll to
-  if (sections.length > 0) {
-    // Find the current section (the one that is visible in the viewport)
-    const currentSectionIndex = sections.findIndex(section => {
-      const rect = section.getBoundingClientRect();
-      return rect.top >= 0 && rect.top < window.innerHeight;
-    });
-
-    // If there's a next section, scroll to it
-    if (currentSectionIndex !== -1 && currentSectionIndex < sections.length - 1) {
-      const nextSection = sections[currentSectionIndex + 1];
-      nextSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+            // Check if the nextSection exists
+            if (nextSection) {
+              nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+        }
       });
+    } else {
+      console.error("Arrow element not found!");
     }
-  }
-});
-
-  </script>
-  </body>
-</html>
+  });
+</script>
