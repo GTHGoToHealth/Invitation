@@ -716,3 +716,14 @@ body.preloader-site {
     font-size: 12vw; /* Adjust font size for small screens */
   }
 }
+
+
+
+/* for stopping the 2nd Cursive text to wrap */
+.dynamic-title {
+  font-family: 'Rouge', sans-serif; /* Replace with your font-family */
+  font-size: 10vw; /* This adjusts the font size dynamically based on the viewport width */
+  max-width: 100%; /* Prevents text from overflowing the container */
+  word-wrap: break-word; /* Ensures that text breaks and doesn’t overflow */
+  text-align: center; /* Ensures it's centered */
+}
