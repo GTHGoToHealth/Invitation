@@ -694,8 +694,11 @@ body.preloader-site {
 
 /* New fix for countdown alignment */
 .countdown {
-  display: inline-block;  /* Make sure it stays inline */
+  display: flex;  /* Make sure it stays inline */
+  justify-content: center;
   text-align: center;  /* Keep it centered */
+  width: 100%
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
