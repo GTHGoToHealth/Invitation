@@ -493,7 +493,7 @@
   document.querySelector('.floating-down-arrow').addEventListener('click', function (e) {
     e.preventDefault();
 
-    const sections = Array.from(document.querySelectorAll('section, .section-dark, .section')); // Adjust selectors as needed
+    const sections = Array.from(document.querySelectorAll('.section-light, section, .section-dark, .section')); // Adjust selectors as needed
     const scrollY = window.scrollY;
     const nextSection = sections.find(section => section.offsetTop > scrollY + 10);
 
