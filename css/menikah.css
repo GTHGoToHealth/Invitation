@@ -692,6 +692,12 @@ body.preloader-site {
   text-overflow: clip; /* Remove ellipses */
 }
 
+/* New fix for countdown alignment */
+.countdown {
+  display: inline-block;  /* Make sure it stays inline */
+  text-align: center;  /* Keep it centered */
+}
+
 @media screen and (max-width: 768px) {
   .title.no-wrap {
     font-size: 10vw; /* Adjust font size for medium screens */
