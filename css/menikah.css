@@ -676,20 +676,30 @@ body.preloader-site {
 
 /* for stopping the Cursive text to wrap */
 
-.no-wrap {
+.hero-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.title.no-wrap {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Prevent overflow */
   font-size: 8vw; /* Set font size based on viewport width */
+  max-width: 100%; /* Prevent text from overflowing horizontally */
+  text-overflow: clip; /* Remove ellipses */
 }
 
 @media screen and (max-width: 768px) {
-  .no-wrap {
-    font-size: 10vw; /* Adjust font size slightly larger for medium screens */
+  .title.no-wrap {
+    font-size: 10vw; /* Adjust font size for medium screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .no-wrap {
-    font-size: 12vw; /* Make the text slightly bigger on smaller screens */
+  .title.no-wrap {
+    font-size: 12vw; /* Adjust font size for small screens */
   }
 }
