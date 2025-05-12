@@ -478,10 +478,10 @@ body.preloader-site {
 
 .btn-whatsapp:hover {
   color: white;
-  background-color: #996E6D;
+  background-color: #bf7877;
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 2px solid #996E6D;
+  border: 2px solid #bf7877;
   width:  210px;
   height: 65px;
   align-items: center;
@@ -490,16 +490,16 @@ body.preloader-site {
 
 
 .btn-whatsapp {
-  background-color: #996E6D;
+  background-color: #bf7877;
   width:  210px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
   border-radius: 10px;  
-  border-left: 1px solid #996E6D;
-  border-right: 1px solid #996E6D;
-  border-top: 1px solid #996E6D;
-  border-bottom: 1px solid #996E6D;
+  border-left: 1px solid #bf7877;
+  border-right: 1px solid #bf7877;
+  border-top: 1px solid #bf7877;
+  border-bottom: 1px solid #bf7877;
   align-items: center;
   margin: 1rem;
 
