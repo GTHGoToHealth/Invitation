@@ -22,10 +22,8 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
 }
 
 .navbar-item.is-active{
@@ -33,13 +31,12 @@ html {
 }
 
 .a.navbar-item{
-  font-color: #996E6D;
+  color: #996E6D
 }
 
 
 .hero {
-  background-image: url(https://picsum.photos/id/25/1920/1080);
-  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url(../image/Papa\ BGIMG_9773.jpg) no-repeat;
+  background-image: url(../image/Papa\ BGIMG_9773.jpg);
   background-attachment: fixed;
   background-size: cover;
   color: white;
