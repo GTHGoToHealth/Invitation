@@ -678,19 +678,18 @@ body.preloader-site {
 
 .no-wrap {
   white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide the overflowed part */
-  text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
-  max-width: 100%; /* Ensure the text doesn't go outside the container */
+  overflow: hidden; /* Prevent overflow */
+  font-size: 8vw; /* Set font size based on viewport width */
 }
 
 @media screen and (max-width: 768px) {
-  .title {
-    font-size: 1.5rem; /* Smaller font size for mobile */
+  .no-wrap {
+    font-size: 10vw; /* Adjust font size slightly larger for medium screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .title {
-    font-size: 1.2rem; /* Even smaller font size for very small screens */
+  .no-wrap {
+    font-size: 12vw; /* Make the text slightly bigger on smaller screens */
   }
 }
