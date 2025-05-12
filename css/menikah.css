@@ -728,3 +728,40 @@ body.preloader-site {
   word-wrap: break-word; /* Ensures that text breaks and doesn’t overflow */
   text-align: center; /* Ensures it's centered */
 }
+
+
+
+/* downward pointing arrow */
+.floating-down-arrow {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.floating-down-arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #bf7877;
+  border-right: 3px solid #bf7877;
+  transform: rotate(45deg);
+  animation: arrowBounce 1.5s infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  40% {
+    transform: rotate(45deg) translateY(8px);
+  }
+  60% {
+    transform: rotate(45deg) translateY(4px);
+  }
+}
