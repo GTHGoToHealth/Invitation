@@ -36,7 +36,9 @@ html {
 
 
 .hero {
-  background-image: url(../image/Papa\ BGIMG_9773.jpg);
+
+  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url(../image/Papa\ BGIMG_9773.jpg) no-repeat;
+
   background-attachment: fixed;
   background-size: cover;
   color: white;
