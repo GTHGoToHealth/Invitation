@@ -37,7 +37,7 @@ html {
 
 .hero {
   background-image: url(https://picsum.photos/id/25/1920/1080);
-  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("https://picsum.photos/id/381/1920/1080") no-repeat;
+  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("../image/Papa\ BGIMG_9773.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
@@ -667,4 +667,24 @@ body.preloader-site {
   vertical-align: middle;
   text-align: center;
   padding: 10px;
+}
+
+
+/* New Section added for snap scrolling */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100vh;                 /* full screen */
+  overflow-y: scroll;            /* vertical scroll */
+  scroll-snap-type: y mandatory; /* enables scroll snapping */
+}
+
+.section-light {
+  height: 100vh;                 /* each section fills screen */
+  scroll-snap-align: start;      /* snap to top */
 }
