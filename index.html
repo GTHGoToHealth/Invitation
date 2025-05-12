@@ -493,17 +493,31 @@
 
   <!-- JavaScript at the end -->
   <script>
-    document.querySelector('.floating-down-arrow').addEventListener('click', function (e) {
-      e.preventDefault();
+document.querySelector('.floating-down-arrow').addEventListener('click', function (e) {
+  e.preventDefault();
 
-      const sections = Array.from(document.querySelectorAll('.scroll-section'));
-      const scrollY = window.scrollY;
-      const nextSection = sections.find(section => section.offsetTop > scrollY + 10);
+  // Get all elements with the class 'scroll-section'
+  const sections = Array.from(document.querySelectorAll('.scroll-section'));
 
-      if (nextSection) {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-      }
+  // Ensure that we have more than one section to scroll to
+  if (sections.length > 0) {
+    // Find the current section (the one that is visible in the viewport)
+    const currentSectionIndex = sections.findIndex(section => {
+      const rect = section.getBoundingClientRect();
+      return rect.top >= 0 && rect.top < window.innerHeight;
     });
+
+    // If there's a next section, scroll to it
+    if (currentSectionIndex !== -1 && currentSectionIndex < sections.length - 1) {
+      const nextSection = sections[currentSectionIndex + 1];
+      nextSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+});
+
   </script>
   </body>
 </html>
