@@ -312,6 +312,7 @@ html {
   font-size: 1.5rem;
   letter-spacing: 0px;
   padding-bottom: 60px;
+  margin-bottom: 0.5rem !important;
 }
 
 .nama-lengkap {
@@ -399,7 +400,8 @@ vertical-align: middle;
 }
 
 .divider {
-  margin: 40px 25px;
+  margin-top: 0.3rem !important; /* reduce space above divider */
+  margin-bottom: 1.2rem;
   display: inline-block;
   max-height: 60px;
   vertical-align: middle;
