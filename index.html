@@ -164,7 +164,7 @@
       
       <!-- Begin regular-section-->
     
-      <div class="section-light regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+      <div class="scroll-section section-light regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         
         <div class="content-wrapper">
           <h1 class="title section-title">INVITATION</h1>
@@ -194,7 +194,7 @@
        
       
             <!-- Begin Waktu Section -->
-            <div class="section-dark" id="Waktu">
+            <div class="section-dark scroll-section" id="Waktu">
               <div class="container">
                 <div class="column is-12 regular-section">
                   <h1 class="title has-text-centered section-title">Date & Time</h1>
@@ -248,7 +248,7 @@
 
             <!-- Begin Lokasi Section -->
            
-            <div class="section-light" id="lokasi" data-aos="fade-up" data-aos-easing="linear" >
+            <div class="section-light scroll-section" id="lokasi" data-aos="fade-up" data-aos-easing="linear" >
               <div class="container">
                 <div class="column is-12 regular-section">
                   <h1 class="title has-text-centered section-title">Location</h1>
@@ -286,7 +286,7 @@
       
 
       <!-- Begin Foto -->
-      <div class="section-dark foto-foto" id="foto">
+      <div class="section-dark foto-foto scroll-section" id="foto">
         <div class="container">
           <div
             class="columns is-multiline"
@@ -417,7 +417,7 @@
       End Tentang Sherly dan Daeng -->
 
       <!-- Begin RSVP Content -->
-      <div class="section-dark contact" id="rsvp">
+      <div class="section-dark contact scroll-section" id="rsvp">
         <div class="container">
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
 
@@ -500,7 +500,7 @@
     document.querySelector('.floating-down-arrow').addEventListener('click', function (e) {
       e.preventDefault();
 
-      const sections = Array.from(document.querySelectorAll('.section-light, section, .section-dark, .section'));
+      const sections = Array.from(document.querySelectorAll('.scroll-section'));
       const scrollY = window.scrollY;
       const nextSection = sections.find(section => section.offsetTop > scrollY + 10);
 
