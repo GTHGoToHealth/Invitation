@@ -669,22 +669,3 @@ body.preloader-site {
   padding: 10px;
 }
 
-
-/* New Section added for snap scrolling */
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.scroll-container {
-  height: 100vh;                 /* full screen */
-  overflow-y: scroll;            /* vertical scroll */
-  scroll-snap-type: y mandatory; /* enables scroll snapping */
-}
-
-.section-light {
-  height: 100vh;                 /* each section fills screen */
-  scroll-snap-align: start;      /* snap to top */
-}
