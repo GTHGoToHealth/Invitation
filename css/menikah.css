@@ -67,6 +67,7 @@ html {
 .hero .tempatwaktu {
   padding-top: 35px;
   font-size: 1.3rem;
+  text-align: center; /* <-- Add this line */
   
 }
 
@@ -340,8 +341,10 @@ vertical-align: middle;
 }
 
 .waktu {
-  font-size: 1.4rem;
-  font-family: 'Raleway', sans-serif;
+  display: inline-block;      /* Allow text-align:center to apply */
+  margin: 0 auto;             /* Center if inside flexbox */
+  float: none !important;     /* Cancel any float */
+  text-align: center;         /* Align its own text */
 }
 
 .tanggal-angka {
@@ -699,7 +702,7 @@ body.preloader-site {
   justify-content: center;
   text-align: center;  /* Keep it centered */
   width: 100%
-  margin: 0 auto;
+  margin: auto;
 }
 
 @media screen and (max-width: 768px) {
