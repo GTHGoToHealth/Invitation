@@ -321,10 +321,10 @@ html {
 .nama-lengkap {
   font-family: 'Rouge Script', sans-serif !important;
   color: #996E6D;
-  font-size: clamp(1.5rem, 10vw, 4rem);
-  letter-spacing: 0px;
+  font-size: clamp(1rem, 10vw, 4rem);
+  letter-spacing: 0;
   padding-bottom: 6px;
-  line-height: 3.7rem;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
