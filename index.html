@@ -665,3 +665,35 @@
   // Initial display
   showSlide(currentSlide);
   </script>
+
+
+<!-- Swipable Carousal JS-->
+
+<script>
+  let startX = 0;
+  let endX = 0;
+  
+  const carousel = document.querySelector('.carousel');
+  
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.changedTouches[0].screenX;
+  });
+  
+  carousel.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+  
+  function handleSwipe() {
+    const threshold = 50; // minimum distance for a swipe
+    const swipeDistance = endX - startX;
+  
+    if (swipeDistance > threshold) {
+      // Swipe right
+      prevSlide();
+    } else if (swipeDistance < -threshold) {
+      // Swipe left
+      nextSlide();
+    }
+  }
+  </script>

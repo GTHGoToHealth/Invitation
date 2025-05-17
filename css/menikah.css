@@ -760,24 +760,32 @@ h1, h2, h3, h4, h5, h6 {
 .carousel {
   position: relative;
   max-width: 600px;
+  height: 400px; /* Set a fixed height */
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
+  background-color: #000; /* Fallback if image doesn't load */
 }
 
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop and fill the frame */
   flex-shrink: 0;
   display: none;
 }
 
 .carousel-image.active {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .carousel-button {
@@ -790,7 +798,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
   padding: 10px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 10; /* Make sure it's above images */
+  border-radius: 50%;
 }
 
 .carousel-button.prev {
