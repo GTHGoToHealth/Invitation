@@ -126,30 +126,30 @@ html {
 }
 
 .main-content {
-  padding-top: 2rem;
+  padding-top: 1rem;
   color: #000; 
   font-family: 'Raleway', sans-serif;
 }
 
 .main-content .section-dark {
   background-color: #F4E2E2;
-  padding: 80px 40px;
+  padding: 40px 40px;
 }
 
 .main-content .section-darker {
   background-color: #EDD2D1;
-  padding: 80px 40px;
+  padding: 40px 40px;
 }
 
 .main-content .section-dark.resume {
   height: 400px;
-  padding-top: 60px;
+  padding-top: 40px;
 
 }
 
 @media (max-width: 599px) {
   .main-content .section-dark.resume {
-    padding-top: 75px;
+    padding-top: 40px;
   }
 }
 
@@ -177,12 +177,12 @@ html {
 
 .main-content .section-cashbac {
   background-color: rgb(238, 250, 253);
-  padding: 80px 40px; 
+  padding: 40px 40px; 
 }
 
 @media (max-width: 599px) {
   .main-content .section-dark.foto-foto {
-    padding: 75px 20px;
+    padding: 40px 20px;
   }
 }
 
@@ -231,7 +231,7 @@ html {
 }
 
 .main-content .section-light.regular-section {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .main-content .section-light.regular-section .is-larger {
@@ -257,12 +257,12 @@ html {
 }
 
 .main-content .section-light.skills {
-  padding: 100px;
+  padding: 40px;
 }
 
 @media (max-width: 599px) {
   .main-content .section-light.skills {
-    padding: 50px 20px 40px 20px;
+    padding: 40px 20px 40px 20px;
     padding-bottom: 20px;
   }
 }
@@ -273,7 +273,7 @@ html {
 }
 
 .main-content .section-light.contact {
-  padding: 80px;
+  padding: 40px;
 }
 
 .main-content .section-light.contact button {
@@ -287,12 +287,12 @@ html {
 
 @media (max-width: 599px) {
   .main-content .section-light.contact {
-    padding: 80px 40px;
+    padding: 40px 40px;
   }
 }
 
 .main-content .section-color.pertanyaan {
-  padding: 100px;
+  padding: 40px;
   background-color: #996E6D;
   color: white;
 }
@@ -304,7 +304,7 @@ html {
 
 .main-content .section-color.pertanyaan i {
   font-size: 3rem;
-  padding: 20px;
+  padding: 40px;
 }
 
 .main-content .section-title {
