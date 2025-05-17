@@ -324,7 +324,7 @@ html {
   color: #996E6D;
   font-size: clamp(1rem, 10vw, 4rem);
   letter-spacing: 0;
-  padding-bottom: 20px;
+  padding-top: 20px;
   line-height: 1.2;
   white-space: nowrap;
 }
