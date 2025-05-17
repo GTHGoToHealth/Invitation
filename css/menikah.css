@@ -758,28 +758,38 @@ h1, h2, h3, h4, h5, h6 {
 /* Photo Carousal */
 
 .carousel {
+  width: 100%;
+  max-width: 600px;        /* Set the fixed width of the frame */
+  height: 400px;           /* Set the fixed height of the frame */
+  padding: 20px;           /* Padding around the images inside the frame */
+  box-sizing: border-box;  /* Ensure padding doesn't increase total size */
+  margin: 0 auto;          /* Center the carousel horizontally */
+  background-color: #f0f0f0; /* Optional: background around the image */
+  border-radius: 10px;     /* Optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: drop shadow */
+  overflow: hidden;        /* Crop anything outside the frame */
   position: relative;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 .carousel-images {
-  position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: relative;
 }
 
 .carousel-image {
   display: none;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;      /* Crop the image to fill the container */
+  border-radius: 5px;     /* Optional: image corners */
 }
 
 .carousel-image.active {
   display: block;
 }
 
+/* Carousel buttons (unchanged) */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -802,8 +812,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 10px;
 }
 
-@media (hover: hover) {
-  .carousel-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
