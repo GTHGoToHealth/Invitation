@@ -436,14 +436,14 @@
     <div class="carousel-images">
       <img src="image/11.webp" class="carousel-image active" alt="Image 1">
       <img src="image/12.webp" class="carousel-image" alt="Image 2">
-      <img src="image/13.webp" class="carousel-image" alt="Image 3">
-      <img src="image/13.webp" class="carousel-image" alt="Image 3">
-      <img src="image/14.webp" class="carousel-image" alt="Image 3">
-      <img src="image/15.webp" class="carousel-image" alt="Image 3">
-      <img src="image/16.webp" class="carousel-image" alt="Image 3">
-      <img src="image/17.webp" class="carousel-image" alt="Image 3">
-      <img src="image/18.webp" class="carousel-image" alt="Image 3">
-      <img src="image/19.webp" class="carousel-image" alt="Image 3">
+      <img src="image/13.webp" class="carousel-image" alt="Image 4">
+      <img src="image/14.webp" class="carousel-image" alt="Image 5">
+      <img src="image/15.webp" class="carousel-image" alt="Image 6">
+      <img src="image/16.webp" class="carousel-image" alt="Image 7">
+      <img src="image/17.webp" class="carousel-image" alt="Image 8">
+      <img src="image/18.webp" class="carousel-image" alt="Image 9">
+      <img src="image/19.webp" class="carousel-image" alt="Image 10">
+      <img src="image/20.webp" class="carousel-image" alt="Image 11">
       <!-- Add more images as needed -->
     </div>
     <button class="carousel-button prev">&#10094;</button>
@@ -628,68 +628,76 @@
 <!-- Carousal JS-->
 
 <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel-image');
-  const totalSlides = slides.length;
-  
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
-    });
-  }
-  
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }
-  
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-  }
-  
-  // Auto-play
-  setInterval(nextSlide, 3000); // Change every 3 seconds
-  
-  // Arrow buttons
-  document.querySelector('.carousel-button.next').addEventListener('click', nextSlide);
-  document.querySelector('.carousel-button.prev').addEventListener('click', prevSlide);
-  
-  // Initial display
-  showSlide(currentSlide);
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-image');
+    const totalSlides = slides.length;
+    const carousel = document.querySelector('.carousel');
 
-
- // SWIPABPLE JS SCRIPT
-  let startX = 0;
-  let endX = 0;
-  
-  const carousel = document.querySelector('.carousel');
-  
-  carousel.addEventListener('touchstart', (e) => {
-    startX = e.changedTouches[0].screenX;
-  });
-  
-  carousel.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-  
-  function handleSwipe() {
-    const threshold = 50; // minimum distance for a swipe
-    const swipeDistance = endX - startX;
-  
-    if (swipeDistance > threshold) {
-      // Swipe right
-      prevSlide();
-    } else if (swipeDistance < -threshold) {
-      // Swipe left
-      nextSlide();
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
     }
-  }
 
-  </script>
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
 
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Auto-play with reset
+    let autoplay = setInterval(nextSlide, 3000);
+
+    function resetAutoplay() {
+      clearInterval(autoplay);
+      autoplay = setInterval(nextSlide, 3000);
+    }
+
+    document.querySelector('.carousel-button.next').addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+
+    document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+
+    // Swipe support
+    let startX = 0;
+    let endX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const threshold = 50;
+      const swipeDistance = endX - startX;
+
+      if (swipeDistance > threshold) {
+        prevSlide();
+        resetAutoplay();
+      } else if (swipeDistance < -threshold) {
+        nextSlide();
+        resetAutoplay();
+      }
+    }
+
+    // Initialize
+    showSlide(currentSlide);
+  });
+</script>
 
 <!-- Swipable Carousal JS-->
 
