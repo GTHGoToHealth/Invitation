@@ -16,7 +16,7 @@ html {
 }
 
 .header-wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 .navbar-item {
@@ -227,11 +227,11 @@ html {
 }
 
 .main-content .section-light {
-  padding: 40px 40px;
+  padding: 20px 40px;
 }
 
 .main-content .section-light.regular-section {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .main-content .section-light.regular-section .is-larger {
