@@ -164,7 +164,7 @@
       
       <!-- Begin regular-section-->
     
-      <div class="scroll-section section-light regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+      <div class="section-light regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         <div class="content-wrapper">
           <h1 class="title section-title">INVITATION</h1>
         </div>
@@ -182,7 +182,7 @@
         </div>
       
         <p><br></p>
-      </div> <!-- ✅ This properly closes .scroll-section -->
+      </div>
       
       
        
@@ -190,7 +190,7 @@
        
       
             <!-- Begin Waktu Section -->
-            <div class="section-dark scroll-section" id="Waktu">
+            <div class="section-dark" id="Waktu">
               <div class="container">
                 <div class="column is-12 regular-section">
                   <h1 class="title has-text-centered section-title">Date & Time</h1>
@@ -244,7 +244,7 @@
 
             <!-- Begin Lokasi Section -->
            
-            <div class="section-light scroll-section" id="lokasi" data-aos="fade-up" data-aos-easing="linear" >
+            <div class="section-light" id="lokasi" data-aos="fade-up" data-aos-easing="linear" >
               <div class="container">
                 <div class="column is-12 regular-section">
                   <h1 class="title has-text-centered section-title">Location</h1>
@@ -282,7 +282,7 @@
       
 
       <!-- Begin Foto -->
-      <div class="section-dark foto-foto scroll-section" id="foto">
+      <div class="section-dark foto-foto" id="foto">
         <div class="container">
           <div
             class="columns is-multiline"
@@ -413,7 +413,7 @@
       End Tentang Sherly dan Daeng -->
 
       <!-- Begin RSVP Content -->
-      <div class="section-dark contact scroll-section" id="rsvp">
+      <div class="section-dark contact" id="rsvp">
         <div class="container">
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
 
@@ -477,56 +477,3 @@
       });
     </script>
 
-    <!-- Downward arrow -->
-    <a href="#" class="floating-down-arrow" aria-label="Scroll down">
-      <span></span>
-    </a>
-
-
-<!-- Arrow Element -->
-<a href="#" class="floating-down-arrow" aria-label="Scroll down">
-  <span></span>
-</a>
-
-<!-- JavaScript at the end -->
-<script>
-  // Ensure the document is fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    // Ensure the arrow element exists before adding the event listener
-    const arrow = document.querySelector('.floating-down-arrow');
-    
-    if (arrow) {
-      // Listen for click events on the floating down arrow
-      arrow.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Get all elements with the class 'scroll-section'
-        const sections = Array.from(document.querySelectorAll('.scroll-section'));
-
-        // Ensure that we have more than one section to scroll to
-        if (sections.length > 0) {
-          // Find the current section (the one that is visible in the viewport)
-          const currentSectionIndex = sections.findIndex(section => {
-            const rect = section.getBoundingClientRect();
-            return rect.top >= 0 && rect.top < window.innerHeight;
-          });
-
-          // If there's a next section, scroll to it
-          if (currentSectionIndex !== -1 && currentSectionIndex < sections.length - 1) {
-            const nextSection = sections[currentSectionIndex + 1];
-
-            // Check if the nextSection exists
-            if (nextSection) {
-              nextSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          }
-        }
-      });
-    } else {
-      console.error("Arrow element not found!");
-    }
-  });
-</script>
