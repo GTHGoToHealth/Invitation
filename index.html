@@ -66,7 +66,7 @@
                   Memories
                 </a>
               </div>
-              
+
             </div>
           </div>
         </nav>
@@ -206,9 +206,9 @@
                   >
                   
                     <p class="is-larger has-text-centered">
-                        <div class="waktu tanggal-hari has-text-centered" style="font-size: 36px;">Sunday</div> 
+                        <div class="waktu tanggal-hari has-text-centered" style="font-size: 30px;">Sunday</div> 
                         <div class="waktu tanggal-angka has-text-centered">01</div>
-                        <div class="waktu tanggal-bulan has-text-centered" style="font-size: 36px;">June 2025</div>
+                        <div class="waktu tanggal-bulan has-text-centered" style="font-size: 30px;">June 2025</div>
                     </p>
                   
                   </div>
@@ -589,3 +589,55 @@
       });
     </script>
 
+
+
+
+
+<!-- Carousal-->
+
+<div class="carousel">
+  <div class="carousel-images">
+    <img src="image/11.webp" class="carousel-image active" alt="Image 1">
+    <img src="iimage/12.webp" class="carousel-image" alt="Image 2">
+    <img src="image/13.webp" class="carousel-image" alt="Image 3">
+    <!-- Add more images as needed -->
+  </div>
+  <button class="carousel-button prev">&#10094;</button>
+  <button class="carousel-button next">&#10095;</button>
+</div>
+
+
+<!-- Carousal JS-->
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-image');
+  const totalSlides = slides.length;
+  
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+  
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+  
+  // Auto-play
+  setInterval(nextSlide, 3000); // Change every 3 seconds
+  
+  // Arrow buttons
+  document.querySelector('.carousel-button.next').addEventListener('click', nextSlide);
+  document.querySelector('.carousel-button.prev').addEventListener('click', prevSlide);
+  
+  // Initial display
+  showSlide(currentSlide);
+  </script>
