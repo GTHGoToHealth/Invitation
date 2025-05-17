@@ -760,12 +760,12 @@ h1, h2, h3, h4, h5, h6 {
 .carousel {
   width: 100%;
   max-width: 600px;        /* Set the fixed width of the frame */
-  height: 400px;           /* Set the fixed height of the frame */
-  padding: 20px;           /* Padding around the images inside the frame */
+  aspect-ratio: 3 / 2;          /* Maintains landscape ratio */
+  padding: 10px;           /* Padding around the images inside the frame */
   box-sizing: border-box;  /* Ensure padding doesn't increase total size */
   margin: 0 auto;          /* Center the carousel horizontally */
   background-color: #f0f0f0; /* Optional: background around the image */
-  border-radius: 10px;     /* Optional: rounded corners */
+  border-radius: 20px;     /* Optional: rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: drop shadow */
   overflow: hidden;        /* Crop anything outside the frame */
   position: relative;
