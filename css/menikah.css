@@ -228,10 +228,11 @@ html {
 
 .main-content .section-light {
   padding: 20px 40px;
+  padding-bottom: 100px;
 }
 
 .main-content .section-light.regular-section {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .main-content .section-light.regular-section .is-larger {
@@ -323,7 +324,7 @@ html {
   color: #996E6D;
   font-size: clamp(1rem, 10vw, 4rem);
   letter-spacing: 0;
-  padding-bottom: 6px;
+  padding-bottom: 20px;
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -533,7 +534,7 @@ body.preloader-site {
   border: 2px solid #996E6D;
   border-radius: 10px;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .cashbac-logo-inline {
@@ -662,7 +663,7 @@ body.preloader-site {
 
 .section-light {
   background-image: url(../image/divider-flowers-leaves.png);
-  background-position: bottom 30px center;
+  background-position: bottom -30px center;
   background-repeat: no-repeat;
   background-size: initial;
 }
