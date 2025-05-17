@@ -227,11 +227,11 @@ html {
 }
 
 .main-content .section-light {
-  padding: 80px 40px;
+  padding: 40px 40px;
 }
 
 .main-content .section-light.regular-section {
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 
 .main-content .section-light.regular-section .is-larger {
@@ -246,7 +246,7 @@ html {
 
 .main-content .section-light.regular-section .right-image img {
   border-radius: 11px;
-  margin: 20px;
+  margin: 10px;
   box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
 }
 
@@ -731,6 +731,12 @@ body.preloader-site {
 
 
 /* To Reducve the Gap Above Title of every page */
-h1, h2, h3, h4, h5, h6 {
+section {
   margin-top: 0;
+  padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
