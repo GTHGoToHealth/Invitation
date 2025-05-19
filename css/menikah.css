@@ -815,3 +815,33 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+
+
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: #666;
+  animation: bounce 1.5s infinite;
+  z-index: 100;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+.scroll-indicator.hide {
+  opacity: 0;
+  pointer-events: none;
+}

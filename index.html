@@ -769,6 +769,34 @@
 <!-- Swipable Carousal JS-->
 
 
+<!-- Bouncing Triangle Arrow Downward-->
+
+<div class="scroll-indicator" id="scroll-indicator">
+  &#9660;
+</div>
+
+
+<script>
+  const scrollIndicator = document.getElementById("scroll-indicator");
+
+  function checkScroll() {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.offsetHeight;
+
+    // Hide when bottom is reached
+    if (scrollY + windowHeight >= documentHeight - 10) {
+      scrollIndicator.classList.add("hide");
+    } else {
+      scrollIndicator.classList.remove("hide");
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  window.addEventListener("resize", checkScroll);
+  document.addEventListener("DOMContentLoaded", checkScroll);
+</script>
+
 
 </body>
 </html>
